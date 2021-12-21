@@ -14,9 +14,9 @@
       "**/*.{js,jsx}",
       "!**/node_modules/**"
     ],
-    "moduleNameMapper":{
+    "moduleNameMapper": {
       "\\.(scss)$": "<rootDir>/__mocks__/styleMock.js"
-  }
+    }
   },
   "keywords": [],
   "author": "",
