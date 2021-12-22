@@ -16,6 +16,20 @@ body {
   grid-gap: 10px;
 }
 
+.liked {
+    grid-area: li;
+    background-color: white;
+    border-radius: 20px;
+    padding:20px;
+    color: #3b5998;
+}
+.recent {
+    grid-area: re;
+    background-color: white;
+    border-radius: 20px;
+    padding:20px;
+    color: #3b5998;
+}
 .header {
   grid-area: hd;
   color: #fff;
