@@ -1,7 +1,50 @@
 /* Blog Contents Styling : Title/Image/descrion/date */
-.container .travel-content {
-    background-color: #fff;
-    padding: 20px;
-    height: 100%;
-    border-radius: 20px;
+
+#long-text-input {
+  width: 90%;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-size: 1.5em;
 }
+
+button {
+    border-radius: 20px;
+    height: 40px;
+    margin-top: 10px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.container .travel-content {
+  background-color: rgba(0, 0, 0, 0.9);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-image: url("../asset/travel-icon2.jpg");
+  display: grid;
+  border: 5px solid black;
+
+}
+
+.travel-input {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: #fff;
+  height: 100%;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+
