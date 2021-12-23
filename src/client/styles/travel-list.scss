@@ -1,0 +1,38 @@
+@import url(./travel-list-mq.scss);
+
+.travel-list {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.travel-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.travel-item img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.travel-item  {
+    
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding:20px;
+  }
+  
+
+  .travel-item .title {
+    margin-top: 10px;
+    color: #3b5998
+  }
+
+  .travel-item .mid {
+    margin-top: 10px;
+  }
+
+
+
+  .travel-item .description {
+    margin-top: 10px;
+  }
