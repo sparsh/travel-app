@@ -3,6 +3,8 @@
 @import url(./fa-global-icons.scss);
 @import url(./global-elements.scss);
 
+
+
 body {
   font-size: 14px;
   // margin:0px;
@@ -12,22 +14,25 @@ body {
 
 .container {
   display: grid;
-  grid-template-areas: "hd" "cn" "ft";
-  grid-gap: 10px;
+  grid-template-areas: "hd" "cn" "tnc" "lp" "ft";
+  margin: 10px;
 }
 
 .tnc {
-    grid-area: li;
+    grid-area: tnc;
     background-color: white;
     border-radius: 20px;
     color: #3b5998;
+    padding:20px;
+    margin-top: 20px;
 }
 .lp {
-    grid-area: re;
-    margin-top: 30px;
+    grid-area: lp;
     background-color: white;
     border-radius: 20px;
     color: #3b5998;
+    padding:20px;
+    margin-top: 20px;
 }
 .header {
   grid-area: hd;
