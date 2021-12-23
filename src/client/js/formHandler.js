@@ -1,34 +1,35 @@
-const ERROR_TEXT = 'Please add valid text';
+import StringConstants from "./string";
 
-function isValidUrl (text) {
-    const regex = text.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-    return regex ? "IS a valid URL" : "NOT a valid URL";
+const getTravelData = (from, to, date) => {
+    console.log("the from is ", from, to, date);
 }
 
-function handleSubmit(event) {
-    event.preventDefault()
 
-    // check what text was put into the form field
-    let formText = document.getElementById('name').value
 
-    if(formText) {
-        fetch(`http://localhost:8080/test?text=${formText}`)
-        .then(res => res.json())
-        .then(function(res) {
-            const text = 
-            `
-            Model: ${res.model}<br>
-            Score Tag: ${res.score_tag}<br>
-            Agreement: ${res.agreement}<br>
-            Subjectivity: ${res.subjectivity}<br>
-            Confidence: ${res.confidence}<br>
-            Irony: ${res.irony}<br>
-            Valid Url: ${isValidUrl(formText)}`
-            document.getElementById('results').innerHTML = text
-        });
+const handleSubmit = () => {
+
+    const errorElement = document.getElementById("error");
+    errorElement.innerText = ""
+    const fromPlace = document.getElementById("from").value;
+    const toPlace = document.getElementById("to").value;
+    const date = document.getElementById("date").value;
+    let error = "";
+    console.log("Fro", fromPlace, toPlace, date)
+    if(!fromPlace) {
+        error = StringConstants.emptyFrom;
+    }
+    else if(!toPlace) {
+        error = StringConstants.emptyDestination;
+    }
+    else if (!date) {
+        error = StringConstants.emptyDate;
     }
     else {
-        document.getElementById('results').innerHTML = ERROR_TEXT;
+        getTravelData(fromPlace, toPlace, date);
+    }
+
+    if(error) {
+        errorElement.innerText = error;
     }
 }
 

@@ -33,7 +33,13 @@ input[type=text] {
     background-color: #3b5998;
     color: white;
     align-self: center;
-    margin-top: 40px;
     cursor: pointer;
   }
   
+  .error {
+    color: #E53935;
+    font-size: 0.9em;
+    display: inline;
+    min-height: 40px;
+    margin:0px
+  }
