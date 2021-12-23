@@ -39,6 +39,7 @@ const getCoordinates = (city) => {
 
 const updateUI = (data, from , to) => {
 const travelList =  document.getElementById("travel-list");
+travelList.innerHTML = "";
     data.forEach(item => {
         const travelItem = document.createElement("div");
         travelItem.className = "travel-item";
@@ -74,7 +75,7 @@ const travelList =  document.getElementById("travel-list");
         const description = document.createElement('div');
         description.className = "description";
         const h3 = document.createElement('h3');
-        const descriptionText = `${to} is 300 km away, Mostly cloudy throught the day`;
+        const descriptionText = `${to} is 300 km away, ${item.weatherInfo} throught the day`;
         h3.appendChild(document.createTextNode(descriptionText));
         description.appendChild(h3);
         
